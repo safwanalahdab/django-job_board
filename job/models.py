@@ -12,6 +12,10 @@ JOB_TYBE = (
     ('part_time' , 'part_time') ,
 )
 
+def upload_image ( instance , filename ) :
+    imagename , extension = filename.split(".") 
+    return "jobs/%s.%s"%(instance.id ,extension)  
+
 class Job ( models.Model ) :
     title = models.CharField( max_length = 100 ) 
     #location 
@@ -22,6 +26,7 @@ class Job ( models.Model ) :
     salary  = models.IntegerField( default = 0 ) 
     expereince = models.IntegerField( default = 1 ) 
     category = models.ForeignKey( 'Category' , on_delete = models.CASCADE )
+    img = models.ImageField( upload_to = upload_image ) 
     def __str__( self ) :
         return self.title 
 

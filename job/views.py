@@ -3,7 +3,7 @@ from .models import *
 # Create your views here.
 
 def job_list ( request ) : 
-    data = Job.objects.all()
+    data = Job.objects.all() 
     context = {
         'job' : data , 
     } 
