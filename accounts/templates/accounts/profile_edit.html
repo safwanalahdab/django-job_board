@@ -38,13 +38,14 @@
                         </div>
                     </div>
                     <div class="apply_job_form white-bg">
-                        <h4>edit new job</h4>
+                        <h4>edit profile</h4>
                         <form action="#" method="post" enctype= "multipart/form-data" >
                             {% csrf_token %}
-                            {% bootstrap_form form %}
+                            {% bootstrap_form userform %}
+                            {% bootstrap_form profileform %}
                             {% buttons %}
 
-                                <button type="submit" class="boxed-btn3 w-100"> applay now </button>
+                                <button type="submit" class="boxed-btn3 w-100"> edit now </button>
                             {% endbuttons %}
                         </form>
                     </div>

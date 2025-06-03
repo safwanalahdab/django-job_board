@@ -3,5 +3,5 @@
     <li>{{profile.user.email}}</li>
     <li>{{profile.phone_number}}</li>
     <li>{{profile.city}}</li>
-    <a href=""> Edit profile </a>
+    <a href=" {% url 'accounts:profile_edit' %} "> Edit profile </a>
 </ul>
