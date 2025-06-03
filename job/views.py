@@ -48,3 +48,4 @@ def add_job( request ) :
     else : 
         form = Add_job() 
     return render( request , 'job/add_job.html' , { 'form' : form } )
+
